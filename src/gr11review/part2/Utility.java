@@ -122,5 +122,31 @@ public class Utility {
         return arr;
         //Return the array.
     }
+    
+    /**
+     * split
+     * Input a 2d array with the row and column number, get a new 2d array where the 2d array gets split by the column and row integer input.
+     * 
+     * @param arr input a 2d array
+     * @param row input a row integer
+     * @param col input a column integer
+     * @return returns a 2d array with changes
+     * 
+     */
+    public static int[][] split(int[][] arr, int row, int col) {
+
+        int newArray[][] = new int[row + 1][col + 1];
+        //Make the new 2d array with the dimentions given by the row and col inputs.
+
+        for (int i = 0; i < row + 1; i++){
+            for (int j = 0; j < col + 1; j++){
+                newArray[i][j] = arr[i][j];
+                //Put elements of the old array into the new array but only within the parameters of row and col.
+            }
+        }
+
+        return newArray;
+        //Return the new array.
+    }
 
 }

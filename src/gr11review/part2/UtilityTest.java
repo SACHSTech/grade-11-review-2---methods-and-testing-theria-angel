@@ -124,4 +124,26 @@ public class UtilityTest{
         int[] intResult8Array = {};
         assertTrue(Arrays.equals(Utility.seriesUp(0), intResult8Array));
     }
+    @Test
+    public void splitTest1(){
+        int[][] intTest12dArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] intResult12dArray = {{1, 2}, {4, 5}};
+        int[][] intNew12dArray = Utility.split(intTest12dArray, 1, 1);
+        assertTrue(Arrays.deepEquals(intNew12dArray, intResult12dArray));
+    }
+
+    @Test
+    public void splitTest2(){
+        int[][] intTest22dArray = {{1, 2, 3}, {4, 5, 6}};
+        int[][] intResult22dArray = {{1, 2}};
+        int[][] intNew22dArray = Utility.split(intTest22dArray, 0, 1);
+        assertTrue(Arrays.deepEquals(intResult22dArray, intNew22dArray));
+    }
+
+    @Test
+    public void splitTest3(){
+        int[][] intTest32dArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] intNew32dArray = Utility.split(intTest32dArray, 2, 2);
+        assertTrue(Arrays.deepEquals(intNew32dArray, intTest32dArray));
+    }
 }
