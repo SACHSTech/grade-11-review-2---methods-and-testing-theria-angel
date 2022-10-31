@@ -101,4 +101,27 @@ public class UtilityTest{
         int[] intTest4Array = {};
         assertTrue(Arrays.equals(Utility.zeroFront(intTest4Array), intTest4Array));
     }
+    @Test
+    public void seriesUpTest1(){
+        int[] intResult5Array = {1, 1, 2, 1, 2, 3};
+        assertTrue(Arrays.equals(Utility.seriesUp(3), intResult5Array));
+    }
+
+    @Test
+    public void seriesUpTest2(){
+        int[] intResult6Array = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4};
+        assertTrue(Arrays.equals(Utility.seriesUp(4), intResult6Array));
+    }
+
+    @Test
+    public void seriesUpTest3(){
+        int[] intResult7Array = {1, 1, 2};
+        assertTrue(Arrays.equals(Utility.seriesUp(2), intResult7Array));
+    }
+
+    @Test
+    public void seriesUpTest4(){
+        int[] intResult8Array = {};
+        assertTrue(Arrays.equals(Utility.seriesUp(0), intResult8Array));
+    }
 }

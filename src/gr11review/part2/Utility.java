@@ -95,4 +95,32 @@ public class Utility {
         return nums;
         //Sort the numbers in the array and out put it which puts all the 0 at the front.
     }
+    
+    /**
+     * seriesUp
+     * By inputting an integer, the method will make an array with the patter {1, 1 , 2, 1, 2, 3...} for how many iterations the input requires.
+     * 
+     * @param n input an integer
+     * @return returns an array
+     * 
+     */
+    public static int[] seriesUp(int n) {
+
+        int[] arr = new int[n * (n + 1) / 2];
+        //Get the number of integers there will be in the array
+
+        int num = 0;
+        //Initialize
+
+        for (int i = 1; i <= n; ++i) {
+            for (int j = 1; j <= i; ++j){
+                arr[num++] = j;
+                //A double loop to go through each iteration and input it into the new array.
+            }
+        }
+
+        return arr;
+        //Return the array.
+    }
+
 }
