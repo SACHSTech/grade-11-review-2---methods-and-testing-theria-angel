@@ -81,4 +81,18 @@ public class Utility {
         return stringList.get(0);
         //Return the first Arraylist slot.
     }
+
+    /**
+     * zeroFront
+     * Inputs the array and rearanges so all the 0 are at the front of the sequence, output a new array with that new sequence.
+     * 
+     * @param nums input an array with integers in it
+     * @return returns an array with rearranged numbers in it
+     * 
+     */
+    public static int[] zeroFront(int[] nums) {
+        Arrays.sort(nums);
+        return nums;
+        //Sort the numbers in the array and out put it which puts all the 0 at the front.
+    }
 }

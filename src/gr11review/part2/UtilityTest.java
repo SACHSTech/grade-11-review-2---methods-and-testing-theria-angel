@@ -76,5 +76,29 @@ public class UtilityTest{
         assertEquals("ab", Utility.alphaWord("/Users/angel/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-theria-angel-1/src/gr11review/part2/words4.txt"));
     }
 
+    @Test
+    public void zeroFrontTest1() {
+        int[] intTest1Array = {1, 0, 0, 1};
+        int[] intResult1Array = {0, 0, 1, 1};
+        assertTrue(Arrays.equals(Utility.zeroFront(intTest1Array), intResult1Array));
+    }
 
+    @Test
+    public void zeroFrontTest2(){
+        int[] intTest2Array = {1, 1, 0, 1, 1, 1, 0};
+        int[] intResult2Array = {0, 0, 1, 1, 1, 1, 1};
+        assertTrue(Arrays.equals(Utility.zeroFront(intTest2Array), intResult2Array));
+    }
+
+    @Test
+    public void zeroFrontTest3(){
+        int[] intTest3Array = {1, 1, 1};
+        assertTrue(Arrays.equals(Utility.zeroFront(intTest3Array), intTest3Array));
+    }
+
+    @Test
+    public void zeroFrontTest4(){
+        int[] intTest4Array = {};
+        assertTrue(Arrays.equals(Utility.zeroFront(intTest4Array), intTest4Array));
+    }
 }
