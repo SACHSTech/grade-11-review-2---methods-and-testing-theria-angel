@@ -50,5 +50,35 @@ public class Utility {
             return false; 
             //If not, return false
     }
-    
+        
+    /**
+     * alphaWord
+     * Inputs the file name of a file, read the file and output the word that is alphabetically first.
+     * 
+     * @param filenametxt inputs a String of a file name
+     * @return returns a String
+     * 
+     */
+    public static String alphaWord(String filenametxt) throws FileNotFoundException{
+        File txt = new File (filenametxt);
+        Scanner scan = new Scanner(txt);
+        ArrayList<String> stringList = new ArrayList<String>();
+        //Grab the file, use scanner to read the file, and make an ArrayList to add the words in the scanner to.
+        
+        while (scan.hasNextLine()){
+            String strWords = scan.nextLine();
+            stringList.add(strWords);
+            //A while loop that keeps going if there is a next line in the file in order to input each of the words in an Arraylist.
+        }
+
+        stringList.replaceAll(String::toLowerCase);
+        Collections.sort(stringList);
+        //Make lowercase for strings just in case, and sort the Array list so the alphabetically first are at the first slot.
+        
+        scan.close();
+        //Close scanner
+
+        return stringList.get(0);
+        //Return the first Arraylist slot.
+    }
 }

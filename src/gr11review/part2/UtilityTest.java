@@ -61,6 +61,20 @@ public class UtilityTest{
         assertEquals(false, Utility.xyzMiddle("xxxxxxyz"));
     }
 
-    
+    @Test
+    public void alphaWordTest1() throws FileNotFoundException{
+        assertEquals("adipiscing", Utility.alphaWord("/Users/angel/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-theria-angel-1/src/gr11review/part2/words.txt"));
+    }
+
+    @Test
+    public void alphaWordTest2() throws FileNotFoundException {
+        assertEquals("x", Utility.alphaWord("/Users/angel/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-theria-angel-1/src/gr11review/part2/words3.txt"));
+    }
+
+    @Test
+    public void alphaWordTest3() throws FileNotFoundException {
+        assertEquals("ab", Utility.alphaWord("/Users/angel/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-theria-angel-1/src/gr11review/part2/words4.txt"));
+    }
+
 
 }
